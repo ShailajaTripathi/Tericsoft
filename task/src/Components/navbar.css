@@ -1,0 +1,12 @@
+.navbar-item{
+    display:flex;
+    justify-content:space-around;
+    margin-left:20%;
+    margin-right:20%;
+  
+}
+.navbar-line{
+    border-bottom: 0.5px solid rgb(199, 195, 195);
+}
+
+
