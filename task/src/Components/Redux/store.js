@@ -11,22 +11,21 @@ class Store{
         this.state = this.reducer(this.state,action);
         }
 }
-const reducer =(state,action)=>{ // reducer
-    if(action.type==="INC_COUNT"){
+const reducer =(state,{type,payload})=>{ // reducer
+    switch(type){
+        case "INC_COUNT":    
         return {
-            count: state.count + action.payload,
+            count: state.count + payload,
         }
-    }
-    else if(action.type==="DEC_COUNT"){
-        return{
-        count: state.count - action.payload,
-    }
-}
-    else{
+        case  "DEC_COUNT":    
+        return {
+            count: state.count + payload,
+        }
+    default:
         return {};
-    }
    
 };
+}
 const init = { count: 0 };
 
 const store = new Store(reducer,init);
